@@ -43,8 +43,12 @@ func main() {
     
     quotes := loadQuotes()
     
-    fmt.Printf("Loaded %d quotes\n", len(quotes))
+    log.Printf("Loaded %d quotes\n", len(quotes))
     
     http.HandleFunc("/", makeHandler(quotes))
-    http.ListenAndServe(*addr, nil)
+    log.Printf("Starting server on address %s", *addr)
+    err := http.ListenAndServe(*addr, nil)
+    if err != nil {
+        log.Fatalf("Error setting up server: %v", err)
+    }
 }
