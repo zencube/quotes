@@ -1,5 +1,5 @@
 # Quotes
-## A quote http service
+## A quote http service powering [quotes.zencu.be](http://quotes.zencu.be)
 
 This is a really simple HTTP-Service for getting text quotes.
 It comes preloaded with 20 zen proverbs and inspirational quotes.
